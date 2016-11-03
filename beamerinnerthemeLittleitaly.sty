@@ -1,0 +1,49 @@
+\mode<presentation>
+
+\setbeamertemplate{background}{
+ 	\begin{tikzpicture}
+		\node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}};
+	  \ifnum\c@framenumber=1%
+        % On title page
+        \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}};
+    \fi%
+	\end{tikzpicture}
+}
+%\setbeamertemplate{background}{
+%	\includegraphics[width=\paperwidth,height=\paperheight]{tria.png}
+%	% \includegraphics[width=\paperwidth,height=\paperheight]{tria_bw.jpg}
+%}
+
+% Title page
+\defbeamertemplate*{title page}{Littleitaly}[1][]
+{ 
+	\centering
+	\pgfsetfillopacity{0.75}
+
+   \vskip2.2cm%
+    \begin{beamercolorbox}[wd=\the\paperwidth,center,sep=4pt,#1]{title page header}
+      \pgfsetfillopacity{1}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    \vskip0.75cm%
+    \pgfsetfillopacity{0.75}
+    \begin{beamercolorbox}[wd=\the\paperwidth,sep=4pt,center,#1]{author}
+    	\pgfsetfillopacity{1}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+     \vskip0.2cm%
+     \pgfsetfillopacity{0.75}
+    \begin{beamercolorbox}[wd=\the\paperwidth,sep=4pt,center,#1]{date}
+    	\pgfsetfillopacity{1}
+      \usebeamerfont{author}\insertdate%
+    \end{beamercolorbox}
+  \vfill
+}
+
+
+% Items
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+\mode
+<all>

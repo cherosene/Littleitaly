@@ -1,0 +1,25 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{Littleitaly}[1][]
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm]{frametitle} 
+  \begin{tikzpicture}
+  \pgfsetfillopacity{0.75}
+  \fill[black] (0,0) rectangle (\the\paperwidth,.75);
+  \pgfsetfillopacity{1}
+  \useasboundingbox(0,0) rectangle(\the\paperwidth,.8);
+   \ifx\insertframesubtitle\@empty%
+      {\node[anchor=west, white,font=\small] at (.8,0.475){\insertframetitle};}
+      \else%
+      {\node[anchor= west, white,font=\small] at (.8,0.475){\insertframetitle};%
+       \node[anchor= west, white,font=\tiny] at (.8,0.175){\insertframesubtitle};}%
+      \fi
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+\mode<all>
+
+
+% TODO: add footer!!!
