@@ -3,21 +3,60 @@
 % Frame title
 \defbeamertemplate*{frametitle}{Littleitaly}[1][]
 {
-  \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm]{frametitle} 
-  \begin{tikzpicture}
+  \vskip1.5pt
   \pgfsetfillopacity{0.75}
-  \fill[black] (0,0) rectangle (\the\paperwidth,.75);
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm]{frametitle}
+    \ifx\insertframesubtitle\@empty%
+    {
+      \begin{beamercolorbox}[sep=6.5pt]{}
+        \pgfsetfillopacity{1}\color{white}\insertframetitle%
+      \end{beamercolorbox}
+    }
+    \else%
+    {
+      \begin{beamercolorbox}[sep=2.8pt]{}
+        \pgfsetfillopacity{1}\fontsize{10}{10}\selectfont\color{white}\insertframetitle\\%
+        \fontsize{8}{10}\selectfont\color{white}\insertframesubtitle%
+      \end{beamercolorbox}
+    }%
+    \fi
+  \end{beamercolorbox}
   \pgfsetfillopacity{1}
-  \useasboundingbox(0,0) rectangle(\the\paperwidth,.8);
-   \ifx\insertframesubtitle\@empty%
-      {\node[anchor=west, white,font=\small] at (.8,0.475){\insertframetitle};}
-      \else%
-      {\node[anchor= west, white,font=\small] at (.8,0.475){\insertframetitle};%
-       \node[anchor= west, white,font=\tiny] at (.8,0.175){\insertframesubtitle};}%
-      \fi
-  \end{tikzpicture}
+}
+
+% Footer
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \pgfsetfillopacity{0.75}
+  \begin{beamercolorbox}[wd=\paperwidth,sep=1pt]{section in head/foot}
+    \pgfsetfillopacity{1}
+    \insertshortauthor\hfill
+    \insertslidenavigationsymbol%
+    \insertframenavigationsymbol%
+    \insertsubsectionnavigationsymbol%
+    \insertsectionnavigationsymbol%
+    \insertdocnavigationsymbol%
+    \insertbackfindforwardnavigationsymbol%  
+    \usebeamerfont{footline}%
+    \hspace{1em}
+    \insertframenumber/\inserttotalframenumber
   \end{beamercolorbox}
 }
+
+% Navigation
+%\setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{navigation symbols}{}{%
+%   \insertslidenavigationsymbol%
+%   \insertframenavigationsymbol%
+%   \insertsubsectionnavigationsymbol%
+%   \insertsectionnavigationsymbol%
+%   \insertdocnavigationsymbol%
+%   \insertbackfindforwardnavigationsymbol%  
+%   \usebeamerfont{footline}%
+%   \usebeamercolor[fg]{footline}%
+%   \hspace{1em}%
+%   \insertframenumber/\inserttotalframenumber
+% }
 
 \mode<all>
 
