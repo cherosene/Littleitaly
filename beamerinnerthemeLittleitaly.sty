@@ -1,6 +1,6 @@
 \mode<presentation>
 
-\setbeamertemplate{background}{
+\setbeamertemplate{background canvas}{%
   % \begin{tikzpicture}
   %   \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}};
   %   \ifnum\c@framenumber=1%
@@ -8,10 +8,10 @@
   %   \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}};
   %   \fi%
   % \end{tikzpicture}
-  \includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}
   \ifnum\c@framenumber=1%
-  % On title page
-  \includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}
+  \includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}%
+  \else%
+  \includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}%
   \fi%
 }
 %\setbeamertemplate{background}{
