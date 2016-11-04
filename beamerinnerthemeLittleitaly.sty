@@ -1,13 +1,18 @@
 \mode<presentation>
 
 \setbeamertemplate{background}{
-  \begin{tikzpicture}
-    \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}};
-    \ifnum\c@framenumber=1%
-    % On title page
-    \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}};
-    \fi%
-  \end{tikzpicture}
+  % \begin{tikzpicture}
+  %   \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}};
+  %   \ifnum\c@framenumber=1%
+  %   % On title page
+  %   \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}};
+  %   \fi%
+  % \end{tikzpicture}
+  \includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}
+  \ifnum\c@framenumber=1%
+  % On title page
+  \includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}
+  \fi%
 }
 %\setbeamertemplate{background}{
 %	\includegraphics[width=\paperwidth,height=\paperheight]{tria.png}
@@ -19,7 +24,6 @@
 { 
   \centering
   \pgfsetfillopacity{0.75}
-  
   \vskip2.2cm%
   \begin{beamercolorbox}[wd=\the\paperwidth,center,sep=4pt,#1]{title page header}
     \pgfsetfillopacity{1}
