@@ -1,0 +1,1 @@
+- In color theme, use palettes instead of defining every color by hand

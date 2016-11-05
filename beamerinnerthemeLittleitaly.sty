@@ -1,23 +1,12 @@
 \mode<presentation>
 
 \setbeamertemplate{background canvas}{%
-  % \begin{tikzpicture}
-  %   \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}};
-  %   \ifnum\c@framenumber=1%
-  %   % On title page
-  %   \node[inner sep=0pt] at (\the\paperwidth/2,\the\paperheight/2) {\includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}};
-  %   \fi%
-  % \end{tikzpicture}
   \ifnum\c@framenumber=1%
   \includegraphics[width=\paperwidth,height=\paperheight]{tria_desaturated.png}%
   \else%
   \includegraphics[width=\paperwidth,height=\paperheight]{tria_fade.png}%
   \fi%
 }
-%\setbeamertemplate{background}{
-%	\includegraphics[width=\paperwidth,height=\paperheight]{tria.png}
-%	% \includegraphics[width=\paperwidth,height=\paperheight]{tria_bw.jpg}
-%}
 
 % Title page
 \defbeamertemplate*{title page}{Littleitaly}[1][]
@@ -25,7 +14,7 @@
   \centering
   \pgfsetfillopacity{0.75}
   \vskip2.2cm%
-  \begin{beamercolorbox}[wd=\the\paperwidth,center,sep=4pt,#1]{title page header}
+  \begin{beamercolorbox}[wd=\the\paperwidth,center,sep=4pt,#1]{title}
     \pgfsetfillopacity{1}
      \usebeamerfont{title}\inserttitle\par%
     \end{beamercolorbox}%
