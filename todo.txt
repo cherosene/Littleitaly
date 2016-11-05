@@ -1,1 +1,2 @@
 - In color theme, use palettes instead of defining every color by hand
+- Understand the difference between inner and outer theme and organize the code
