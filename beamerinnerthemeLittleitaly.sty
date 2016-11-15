@@ -4,7 +4,11 @@
   \ifnum\c@framenumber=1%
   \includegraphics[width=\paperwidth,height=\paperheight]{tria.png}%
   \else%
-  \includegraphics[width=\paperwidth,height=\paperheight]{tria_bw.png}%
+    \ifx\insertframetitle\@empty%
+    \includegraphics[width=\paperwidth,height=\paperheight]{tria_bw_notitle.png}%
+    \else%
+    \includegraphics[width=\paperwidth,height=\paperheight]{tria_bw.png}%
+    \fi%
   \fi%
 }
 
