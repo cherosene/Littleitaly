@@ -5,10 +5,10 @@
 {
   %\vskip1.5pt
   \pgfsetfillopacity{0.75}
-  \begin{beamercolorbox}[wd=\paperwidth,ht=0.8cm]{frametitle}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=23pt]{frametitle}
     \ifx\insertframesubtitle\@empty%
     {
-      \begin{beamercolorbox}[sep=6.5pt]{}
+      \begin{beamercolorbox}[sep=4pt]{}
         \pgfsetfillopacity{1}\color{white}\insertframetitle%
       \end{beamercolorbox}
     }
@@ -27,10 +27,10 @@
 % Header
 \setbeamertemplate{headline}{%
   \pgfsetfillopacity{0.75}
-  \begin{beamercolorbox}[wd=\paperwidth,ht=10pt,sep=2.8pt]{section in head/foot}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=10pt,sep=1.8pt]{section in head/foot}
     \pgfsetfillopacity{1}
-    \usebeamerfont{footline}%
-    \inserttitle\hfill\insertsubsection
+%    \usebeamerfont{footline}%
+    \inserttitle\hfill\insertsection
   \end{beamercolorbox}
 }
 
@@ -38,17 +38,17 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}{%
   \pgfsetfillopacity{0.75}
-  \begin{beamercolorbox}[wd=\paperwidth,ht=10pt,sep=1.2pt]{section in head/foot}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=10pt,sep=2.5pt]{section in head/foot}
     \pgfsetfillopacity{1}
-    \usebeamerfont{footline}%
+%    \usebeamerfont{footline}%
     \insertshortauthor\hfill
-    \insertslidenavigationsymbol%
-    \insertframenavigationsymbol%
-    \insertsubsectionnavigationsymbol%
-    \insertsectionnavigationsymbol%
-    \insertdocnavigationsymbol%
-    \insertbackfindforwardnavigationsymbol%
-    \hspace{1em}
+%    \insertslidenavigationsymbol%
+%    \insertframenavigationsymbol%
+%    \insertsubsectionnavigationsymbol%
+%    \insertsectionnavigationsymbol%
+%    \insertdocnavigationsymbol%
+%    \insertbackfindforwardnavigationsymbol%
+%    \hspace{1em}
     \insertframenumber/\inserttotalframenumber
   \end{beamercolorbox}
 }
